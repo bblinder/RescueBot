@@ -15,9 +15,9 @@ def make_call():
     client = Client(account_sid, auth_token)
 
     call = client.calls.create(
-        to=PHONE_NUMBER,
+        to=RECIPIENT_PHONE_NUMBER,
         from_=os.environ['TWILIO_PHONE_NUMBER'],
-        twiml='<Response><Say>Where do you want me, Ritchie?</Say></Response>'
+        twiml='<Response><Say>voice=Polly.Amy"Where do you want me, Ritchie?</Say></Response>'
     )
 
     return str(call.sid)
