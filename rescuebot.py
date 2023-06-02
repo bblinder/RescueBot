@@ -64,7 +64,12 @@ def make_call():
             to=RECIPIENT_PHONE_NUMBER,
             from_=os.environ["TWILIO_PHONE_NUMBER"],
             twiml="<Response><Say>Its priest. Have a little priest. \
-            Is it really good? Sir, its too good at least.</Say></Response>",
+            Is it really good? Sir, its too good at least. \
+            Then again they dont commit sins of the flesh, \
+            so its pretty fresh. Awful lot of fat. Only where its sat. \
+            Havent you got poet or something like that? \
+            No, you see the trouble with poet is how do you know its deceased? \
+            Try the priest.</Say></Response>",
         )
 
         LOGGER.info("Call initiated with SID: %s", call.sid)
