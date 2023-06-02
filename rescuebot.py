@@ -17,10 +17,11 @@ def make_call():
     call = client.calls.create(
         to=RECIPIENT_PHONE_NUMBER,
         from_=os.environ['TWILIO_PHONE_NUMBER'],
-        twiml='<Response><Say>voice=Polly.Amy"Where do you want me, Ritchie?</Say></Response>'
+        #twiml='<Response><Say>Where do you want me Ritchie?</Say></Response>'
+        twiml='<Response><Say>Its priest. Have a little priest. Is it really good? Sir, its too good at least.</Say></Response>'
     )
 
-    return str(call.sid)
+    return "Success!"
 
 if __name__ == '__main__':
-    app.run(port=5000, debug=True)
+    app.run(port=8080, debug=False)
